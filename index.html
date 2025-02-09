@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BondarComp - Stock</title>
+  <style>
+    /* General page styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9; /* Light background for contrast */
+      color: #333; /* Default text color */
+      overflow: auto; /* Allow scrolling */
+      height: 100%; /* Ensure the body height is at least 100% of the viewport */
+    }
+
+    /* Header styling */
+    header {
+      background-color: #005b96; /* Blue background */
+      color: white;
+      text-align: center;
+      padding: 1.5em 0;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 1.1em;
+      font-weight: lighter;
+    }
+
+    /* Product Grid Container */
+    .container {
+      width: 90%;
+      margin: 2em auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      justify-content: center;
+    }
+
+    /* Individual Product Card Styling */
+    .product-card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* Product Information Styling */
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-info h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: #005b96; /* Blue for product titles */
+    }
+
+    .product-info p {
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    .product-info .price {
+      font-size: 1.1em;
+      font-weight: bold;
+      margin-top: 10px;
+      color: #005b96; /* Blue color for price */
+    }
+
+    .product-info .category {
+      font-size: 0.85em;
+      margin-top: 10px;
+      color: #777;
+    }
+
+    /* Specs section styling */
+    .product-info .specs {
+      font-size: 0.85em;
+      margin-top: 15px;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .product-info .specs strong {
+      color: #005b96; /* Blue color for specs titles */
+    }
+
+    .product-info .specs ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .product-info .specs ul li {
+      margin-bottom: 5px;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      position: relative;
+      width: 100%;
+      bottom: 0;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* Responsive Design for smaller devices */
+    @media (max-width: 768px) {
+      .product-card {
+        margin-bottom: 20px;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>BondarComp - Our Stock</h1>
+  <p>אחריות כפולה, שירות הגבוהה ביותר</p>
+  <p>כתובת - כצנלסון 16 בת ים</p>
+</header>
+
+<div class="container">
+  <!-- Product 1: Apple iMac 24-inch -->
+  <div class="product-card">
+    <img src="https://m.media-amazon.com/images/I/21wRkAA8j2L._AC_SY355_.jpg" alt="Apple iMac 24-inch">
+    <div class="product-info">
+      <h3>Apple iMac 24-inch</h3>
+      <p>The sleek 24-inch Apple iMac with Apple's M1 chip. Powerful, efficient, and stylish, with vibrant color options.</p>
+      <p class="price">4,806.30 NIS</p>
+      <p class="category">Category: All-in-One</p>
+      <div class="specs">
+        <strong>Specifications:</strong>
+        <ul>
+          <li><strong>Display:</strong> 24-inch Retina 4.5K display</li>
+          <li><strong>Processor:</strong> Apple M1 Chip with 8-core CPU</li>
+          <li><strong>Graphics:</strong> Integrated 7-core GPU</li>
+          <li><strong>Memory:</strong> 8GB unified memory</li>
+          <li><strong>Storage:</strong> 256GB SSD</li>
+          <li><strong>Camera:</strong> 1080p FaceTime HD camera</li>
+          <li><strong>Operating System:</strong> macOS</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 2: Dell XPS 13 -->
+  <div class="product-card">
+    <img src="https://m.media-amazon.com/images/I/710EGJBdIML._AC_SL1500_.jpg" alt="Dell XPS 13">
+    <div class="product-info">
+      <h3>Dell XPS 13</h3>
+      <p>Ultra-portable and powerful laptop with Intel's 11th Gen processors, a 13.4" InfinityEdge display, and long battery life.</p>
+      <p class="price">3,696.30 NIS</p>
+      <p class="category">Category: Laptop</p>
+      <div class="specs">
+        <strong>Specifications:</strong>
+        <ul>
+          <li><strong>Display:</strong> 13.4-inch Full HD+ InfinityEdge Touch Display</li>
+          <li><strong>Processor:</strong> Intel Core i7-1165G7 (4.7 GHz)</li>
+          <li><strong>Graphics:</strong> Intel Iris Xe Graphics</li>
+          <li><strong>Memory:</strong> 8GB LPDDR4x RAM</li>
+          <li><strong>Storage:</strong> 512GB SSD</li>
+          <li><strong>Battery Life:</strong> Up to 12 hours</li>
+          <li><strong>Operating System:</strong> Windows 10 Home</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 3: ASUS ZenBook 14 -->
+  <div class="product-card">
+    <img src="https://m.media-amazon.com/images/I/51okgnHrVkL._AC_SL1360_.jpg" alt="ASUS ZenBook 14">
+    <div class="product-info">
+      <h3>ASUS ZenBook 14</h3>
+      <p>A sleek, ultra-portable laptop with Intel Core i7 processor and long battery life, perfect for professionals on the go.</p>
+      <p class="price">4,066.30 NIS</p>
+      <p class="category">Category: Laptop</p>
+      <div class="specs">
+        <strong>Specifications:</strong>
+        <ul>
+          <li><strong>Display:</strong> 14-inch Full HD display</li>
+          <li><strong>Processor:</strong> Intel Core i7-1165G7</li>
+          <li><strong>Graphics:</strong> Intel Iris Xe Graphics</li>
+          <li><strong>Memory:</strong> 16GB LPDDR4x RAM</li>
+          <li><strong>Storage:</strong> 512GB SSD</li>
+          <li><strong>Battery Life:</strong> Up to 10 hours</li>
+          <li><strong>Operating System:</strong> Windows 10</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 4: HP Spectre x360 -->
+  <div class="product-card">
+    <img src="https://m.media-amazon.com/images/I/61defWaJ8UL._AC_SX355_.jpg" alt="HP Spectre x360">
+    <div class="product-info">
+      <h3>HP Spectre x360</h3>
+      <p>Stylish 2-in-1 convertible laptop with a 13.3" 4K OLED display and powerful Intel Core i7 processor.</p>
+      <p class="price">5,546.30 NIS</p>
+      <p class="category">Category: Laptop</p>
+      <div class="specs">
+        <strong>Specifications:</strong>
+        <ul>
+          <li><strong>Display:</strong> 13.3-inch 4K OLED Touch Display</li>
+          <li><strong>Processor:</strong> Intel Core i7-1165G7</li>
+          <li><strong>Graphics:</strong> Intel Iris Xe Graphics</li>
+          <li><strong>Memory:</strong> 16GB LPDDR4x RAM</li>
+          <li><strong>Storage:</strong> 512GB SSD</li>
+          <li><strong>Battery Life:</strong> Up to 12 hours</li>
+          <li><strong>Operating System:</strong> Windows 10 Home</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 5: Microsoft Surface Laptop 4 -->
+  <div class="product-card">
+    <img src="https://m.media-amazon.com/images/I/611Agc52EHL._AC_SX679_.jpg" alt="Microsoft Surface Laptop 4">
+    <div class="product-info">
+      <h3>Microsoft Surface Laptop 4</h3>
+      <p>A versatile 13.5" laptop with a high-resolution PixelSense touchscreen and 11th Gen Intel Core i7.</p>
+      <p class="price">4,436.30 NIS</p>
+      <p class="category">Category: Laptop</p>
+      <div class="specs">
+        <strong>Specifications:</strong>
+        <ul>
+          <li><strong>Display:</strong> 13.5-inch PixelSense Touchscreen</li>
+          <li><strong>Processor:</strong> Intel Core i7-1185G7</li>
+          <li><strong>Graphics:</strong> Intel Iris Xe Graphics</li>
+          <li><strong>Memory:</strong> 16GB LPDDR4x RAM</li>
+          <li><strong>Storage:</strong> 512GB SSD</li>
+          <li><strong>Battery Life:</strong> Up to 11.5 hours</li>
+          <li><strong>Operating System:</strong> Windows 10</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 6: Acer Swift 3 -->
+  <div class="product-card">
+    <img src="https://m.media-amazon.com/images/I/51CyZhzk0bL.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Acer Swift 3">
+    <div class="product-info">
+      <h3>Acer Swift 3</h3>
+      <p>A lightweight, affordable ultrabook with an Intel Core i5 processor and a 14" Full HD display.</p>
+      <p class="price">3,326.30 NIS</p>
+      <p class="category">Category: Laptop</p>
+      <div class="specs">
+        <strong>Specifications:</strong>
+        <ul>
+          <li><strong>Display:</strong> 14-inch Full HD</li>
+          <li><strong>Processor:</strong> Intel Core i5-1135G7</li>
+          <li><strong>Graphics:</strong> Intel Iris Xe Graphics</li>
+          <li><strong>Memory:</strong> 8GB LPDDR4x RAM</li>
+          <li><strong>Storage:</strong> 512GB SSD</li>
+          <li><strong>Battery Life:</strong> Up to 11 hours</li>
+          <li><strong>Operating System:</strong> Windows 10 Home</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 7: Lenovo Legion 5 -->
+  <div class="product-card">
+    <img src="https://m.media-amazon.com/images/I/71gMKV+N6WL._AC_SX300_SY300_.jpg" alt="Lenovo Legion 5">
+    <div class="product-info">
+      <h3>Lenovo Legion 5</h3>
+      <p>Powerful gaming laptop featuring an AMD Ryzen 7 processor and NVIDIA GeForce GTX 1660 Ti graphics card.</p>
+      <p class="price">4,806.30 NIS</p>
+      <p class="category">Category: Gaming Laptop</p>
+      <div class="specs">
+        <strong>Specifications:</strong>
+        <ul>
+          <li><strong>Display:</strong> 15.6-inch Full HD</li>
+          <li><strong>Processor:</strong> AMD Ryzen 7 4800H</li>
+          <li><strong>Graphics:</strong> NVIDIA GeForce GTX 1660 Ti</li>
+          <li><strong>Memory:</strong> 16GB DDR4 RAM</li>
+          <li><strong>Storage:</strong> 512GB SSD</li>
+          <li><strong>Battery Life:</strong> Up to 7 hours</li>
+          <li><strong>Operating System:</strong> Windows 10</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 8: Razer Blade 15 -->
+  <div class="product-card">
+    <img src="https://m.media-amazon.com/images/I/71RwIx4GXnL.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Razer Blade 15">
+    <div class="product-info">
+      <h3>Razer Blade 15</h3>
+      <p>Compact and powerful gaming laptop with a 15.6" 4K OLED display and NVIDIA RTX 3070 graphics card.</p>
+      <p class="price">6,286.30 NIS</p>
+      <p class="category">Category: Gaming Laptop</p>
+      <div class="specs">
+        <strong>Specifications:</strong>
+        <ul>
+          <li><strong>Display:</strong> 15.6-inch 4K OLED Touch Display</li>
+          <li><strong>Processor:</strong> Intel Core i7-10875H</li>
+          <li><strong>Graphics:</strong> NVIDIA GeForce RTX 3070</li>
+          <li><strong>Memory:</strong> 16GB DDR4 RAM</li>
+          <li><strong>Storage:</strong> 1TB SSD</li>
+          <li><strong>Battery Life:</strong> Up to 6 hours</li>
+          <li><strong>Operating System:</strong> Windows 10</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 9: MSI GE66 Raider -->
+  <div class="product-card">
+    <img src="https://m.media-amazon.com/images/I/71q9jQWFFkL.__AC_SY300_SX300_QL70_FMwebp_.jpg" alt="MSI GE66 Raider">
+    <div class="product-info">
+      <h3>MSI GE66 Raider</h3>
+      <p>High-performance gaming laptop with a 15.6" display and powerful specs, designed for professional gamers.</p>
+      <p class="price">8,136.30 NIS</p>
+      <p class="category">Category: Gaming Laptop</p>
+      <div class="specs">
+        <strong>Specifications:</strong>
+        <ul>
+          <li><strong>Display:</strong> 15.6-inch Full HD 240Hz</li>
+          <li><strong>Processor:</strong> Intel Core i7-10870H</li>
+          <li><strong>Graphics:</strong> NVIDIA GeForce RTX 3070</li>
+          <li><strong>Memory:</strong> 16GB DDR4 RAM</li>
+          <li><strong>Storage:</strong> 1TB SSD</li>
+          <li><strong>Battery Life:</strong> Up to 8 hours</li>
+          <li><strong>Operating System:</strong> Windows 10</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 10: Alienware m15 R6 -->
+  <div class="product-card">
+    <img src="https://m.media-amazon.com/images/I/71J1lHBTo3L.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Alienware m15 R6">
+    <div class="product-info">
+        <h3>Samsung Galaxy Book Pro 360</h3>
+      <p>2-in-1 laptop with a 13.3" AMOLED touchscreen, Intel Core i7, and long-lasting battery.</p>
+      <p class="price">4,786.30 NIS</p>
+      <p class="category">Category: Laptop</p>
+      <div class="specs">
+        <strong>Specifications:</strong>
+        <ul>
+            <li><strong>Display:</strong> 13.3-inch AMOLED touchscreen</li>
+            <li><strong>Processor:</strong> Intel Core i7-1165G7</li>
+            <li><strong>Graphics:</strong> Intel Iris Xe Graphics</li>
+            <li><strong>Memory:</strong> 16GB RAM</li>
+            <li><strong>Storage:</strong> 512GB SSD</li>
+            <li><strong>Battery Life:</strong> Up to 12 hours</li>
+            <li><strong>Operating System:</strong> Windows 10 Home</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <!-- Product 11 -->
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71ysHVMH4FL.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Samsung Galaxy Book Pro 360">
+        <div class="product-info">
+          <h3>Alienware m15 R6</h3>
+          <p>Top-tier gaming laptop featuring an Intel Core i7 processor, NVIDIA RTX 3070, and high refresh rate display.</p>
+          <p class="price">5,546.30 NIS</p>
+          <p class="category">Category: Gaming Laptop</p>
+          <div class="specs">
+            <strong>Specifications:</strong>
+            <ul>
+              <li><strong>Display:</strong> 15.6-inch Full HD 165Hz</li>
+              <li><strong>Processor:</strong> Intel Core i7-11800H</li>
+              <li><strong>Graphics:</strong> NVIDIA GeForce RTX 3070</li>
+              <li><strong>Memory:</strong> 16GB DDR4 RAM</li>
+              <li><strong>Storage:</strong> 512GB SSD</li>
+              <li><strong>Battery Life:</strong> Up to 8 hours</li>
+              <li><strong>Operating System:</strong> Windows 10</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<footer>
+  <p>© 2024 BondarComp. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
